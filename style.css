@@ -1,0 +1,16 @@
+body {
+    background: linear-gradient(45deg, purple, cyan);
+    height: 100vh;
+}
+
+form {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
+label {
+    text-align: right;
+}
+
