@@ -1,17 +1,20 @@
 
 let myLibrary = [];
 
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author
-    this.pages = pages;
-    this.read = read;
-    this.info = function() {
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author
+        this.pages = pages;
+        this.read = read;
+    }
+    
+    get info() {
         let readResponse = 'not read yet'
-        if (read) {
+        if (this.read) {
             readResponse = 'has been read'
         }
-        return `${title} by ${author}, ${pages} pages, ${readResponse}`
+        return `${this.title} by ${this.author}, ${this.pages} pages, ${readResponse}`
     }
 }
 
@@ -84,7 +87,7 @@ const bookContainer = document.querySelector('.book-container')
 function renderBook(book) {
     const bookInfo = document.createElement('p');
     bookInfo.className = 'book';
-    bookInfo.textContent = book.info();
+    bookInfo.textContent = book.info;
     bookContainer.appendChild(bookInfo);
 }
 
