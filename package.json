@@ -1,0 +1,23 @@
+{
+  "name": "library",
+  "version": "1.0.0",
+  "description": "Not much to see here, this is just an exercise in playing with vanilla js from Odin project",
+  "main": "Book.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjniemeyer/library.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjniemeyer/library/issues"
+  },
+  "homepage": "https://github.com/jjniemeyer/library#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
