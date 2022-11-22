@@ -1,14 +1,7 @@
 import {Book} from "./Book.js"
+import {Library} from "./Library.js"
 
-let myLibrary = [];
-
-function addBookToLibrary(book) {
-  myLibrary.push(book);
-}
-
-function logLibrary() {
-  myLibrary.forEach((e) => console.log(`${e.info()}`));
-}
+const myLibrary = new Library();
 
 const formContainer = document.querySelector(".form-container");
 
@@ -61,7 +54,7 @@ newBook.addEventListener("click", () => {
   const submit = createButton("submit", "submit");
   submit.addEventListener("click", () => {
     const book = bookFromForm();
-    addBookToLibrary(book);
+    myLibrary.list = book;
     renderBook(book);
     removeBookForm();
   });
